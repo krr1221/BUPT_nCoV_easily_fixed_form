@@ -118,7 +118,7 @@ for i in range(len(USERs)):
 	# 设置打卡成功flag，默认成功为1
 	Flag_success = 1
 	USERNAME,PASSWORD,NAME,SFZX=USERs[i]
-	logging.info('Start authorize for %s ...', str(USERNAME))
+	logging.info('Start authorize for %s ...', str(NAME))
 	
 	try:
 		# 设置连接
@@ -171,7 +171,7 @@ for i in range(len(USERs)):
 		data["province"] = postion[0]
 		data["sfzx"] = SFZX
 
-		logging.info('Form: area: %s, is in university: %s', str(AREA[i]) ,bool(SFZX[i]))
+		logging.info('Form: is in university: %s', bool(SFZX))
 		logging.debug(data)
 
 		# 填报
